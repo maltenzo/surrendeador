@@ -13,12 +13,12 @@ las funcionalidades de este bot se limitan a:
  - jugar o interactuar con los personajes
  - recoger objetos
  - reclamar recompensas
- 
+
  # Como lo hace:
  Para todas las interacciones con botones (ej buscar partida, aceptar rendirse) conoce las posiciones de los botones, ademas de los colores que indican que debe realizar una accion. Por ejemplo el boton de rendirse permanece opaco hasta que la accion puede realizarse.
  Entonces lo unico que debe hacer es mirar que en las posiciones señalas se encuentren los colores indicados.
- 
+
  # Problemas que se deberian solucionar:
  - Al completar misiones o recibir recompensas el cliente se comporta de forma no esperada, asi que falla y cambia de estado cuando no deberia (por ej cree que sigue en partida)
  - Luego de jugar mucho tiempo el cliente parece crashear, seria bueno que se encargue de reiniciar el juego
- - Los clicks dentro de la partida de tft no funcionan bien, por alguna razon el click que hace sobre el boton de rendirse muchas veces parece no hacer efecto. (pero eventualmente lo consigue)
+ - Los clicks dentro de la partida de tft no funcionan bien, por alguna razon el click que hace sobre el boton de rendirse muchas veces parece no hacer efecto. (pero eventualmente lo consigue.)
