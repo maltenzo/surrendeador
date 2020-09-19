@@ -17,6 +17,7 @@ las funcionalidades de este bot se limitan a:
  # Como lo hace:
  Para todas las interacciones con botones (ej buscar partida, aceptar rendirse) conoce las posiciones de los botones, ademas de los colores que indican que debe realizar una accion. Por ejemplo el boton de rendirse permanece opaco hasta que la accion puede realizarse.
  Entonces lo unico que debe hacer es mirar que en las posiciones señalas se encuentren los colores indicados.
+ Ahora es configurable desde el menu principal para que sea un poco mas amigable para otros.
 
  # Problemas que se deberian solucionar:
  - Al completar misiones o recibir recompensas el cliente se comporta de forma no esperada, asi que falla y cambia de estado cuando no deberia (por ej cree que sigue en partida)
