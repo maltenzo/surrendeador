@@ -79,13 +79,17 @@ def no_entre(dict):
         x = dict["ACEPTAR"][0]
         y = dict["ACEPTAR"][1]
         #print (pixel_values[width*y_aceptar+x_aceptar])
-        if pixel_values[width*y+x] != (44, 41, 37) and pixel_values[width*y+x] != dict["COLOR_ACEPTAR"] and pixel_values[width*y+x] != (96, 97, 97):
+        if pixel_values[width*y+x] != dict["PRE-ACEPTAR"] and pixel_values[width*y+x] != dict["COLOR_ACEPTAR"] and pixel_values[width*y+x] != dict["POST-ACEPTAR"] :
             res = False
             #print("entre")
         return res
 
 def main(dict):
+
     #Busco partida
+    mouse.move(dict["ACEPTAR"][0], dict["ACEPTAR"][1], True, 0)
+    dict["PRE-ACEPTAR"] = ver_colores.dame_colores()
+    dict["POST-ACEPTAR"] = ver_colores.dame_colores()
     mouse.move(dict["BUSCAR"][0], dict["BUSCAR"][1], True, 0)
     mouse.click("left")
     #encuentro y acepto la partida
@@ -93,32 +97,31 @@ def main(dict):
 
     while no_entre(dict):
         if encontre_partida():
-            sleep(1)
-            mouse.click("left")
+            sleep(0.5)
+            pyautogui.click()
+            sleep(0.3)
+            dict["POST-ACEPTAR"] = ver_colores.dame_colores()
     #abro el menu
-    print("entre")
+
     sleep(650)
 
     while not surrendear_2():
         #memmuevo al rendirse
         if not surrendear_2():
             keyboard.send("esc", True, True)
-            mouse.move(dict["RENDIRSE"][0], dict["RENDIRSE"][1], True, 1)
-            sleep(1)
+            mouse.move(dict["RENDIRSE"][0], dict["RENDIRSE"][1], True, 0)
+            sleep(2)
             #surrendeo
-            mouse.click("left")
-            sleep(1)
             pyautogui.click()
+            sleep(0.5)
         if not surrendear_2():
             #muevo el mouse al estoy seguro y surrendeo
-            mouse.move(dict["SEGURO"][0], dict["SEGURO"][1], True, 1)
-            sleep(1)
-            mouse.click("left")
-            sleep(1)
+            mouse.move(dict["SEGURO"][0], dict["SEGURO"][1], True, 0)
+            sleep(2)
             pyautogui.click()
-            sleep(1)
+            sleep(0.5)
             keyboard.send("esc", True, True)
-        sleep(1)
+        sleep(3)
 
 
     sleep(60)
