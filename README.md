@@ -23,3 +23,5 @@ las funcionalidades de este bot se limitan a:
  - Al completar misiones o recibir recompensas el cliente se comporta de forma no esperada, asi que falla y cambia de estado cuando no deberia (por ej cree que sigue en partida)
  - Luego de jugar mucho tiempo el cliente parece crashear, seria bueno que se encargue de reiniciar el juego
  - Los clicks dentro de la partida de tft no funcionan bien, por alguna razon el click que hace sobre el boton de rendirse muchas veces parece no hacer efecto. (Parece ser que esta relacionado con una limitacion de la libreria del mouse, sobre que no manda eventos que ocurren cuando el click es por hardware.)
+
+#Changelog
