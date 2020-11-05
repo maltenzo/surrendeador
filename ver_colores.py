@@ -17,3 +17,7 @@ def dame_colores():
     width, height = img.size
     pixel_values = list(img.getdata())
     return (pixel_values[width*mouse.get_position()[1]+mouse.get_position()[0]])
+
+#while True:
+ #  print(mouse.get_position())
+  # print( dame_colores())

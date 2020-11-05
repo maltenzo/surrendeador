@@ -19,7 +19,7 @@ def config():
     termine = False
     while(not termine):
             switch()
-            if (kb.is_pressed("6")):
+            if (kb.is_pressed("5")):
                 termine = True
     salvar_datos()
 
@@ -41,15 +41,19 @@ def string_a_tupla(s):
     return tuple(tupla)
 def leer_datos():
     dict = {}
-    with open(F"{os.getcwd()}/config.txt", "r") as f:
-        for line in f:
-            words = line.split(": ")
-            key = words[0]
-            value = words[1]
-            dict[key] = string_a_tupla(value)
+    if os.path.isfile(F"{os.getcwd()}/config.txt"):
+        with open(F"{os.getcwd()}/config.txt", "r") as f:
+            for line in f:
+                words = line.split(": ")
+                key = words[0]
+                value = words[1]
+                dict[key] = string_a_tupla(value)
+    else:
+        "No hay datos guardados"
     return dict
 
 def switch():
+    mouse = mouse()
     if (kb.is_pressed("1")):
         ps(recording)
         while(not mouse.is_pressed("left")):
@@ -65,22 +69,22 @@ def switch():
         dict["ACEPTAR"] = mouse.get_position()
         ps(recorded)
 
-    elif (kb.is_pressed("3")):
-        ps(recording)
-        while(not mouse.is_pressed("left")):
-            x=0
-        dict["COLOR_RENDIRSE"] = dame_colores()
-        dict["RENDIRSE"] = mouse.get_position()
-        ps(recorded)
+    #elif (kb.is_pressed("3")):
+    #    ps(recording)
+    #    while(not mouse.is_pressed("left")):
+    #        x=0
+    #    dict["COLOR_RENDIRSE"] = dame_colores()
+    #    dict["RENDIRSE"] = mouse.get_position()
+    #    ps(recorded)
 
-    elif (kb.is_pressed("4")):
+elif (kb.is_pressed("3")):
         ps(recording)
         while(not mouse.is_pressed("left")):
             x=0
         dict["SEGURO"] = mouse.get_position()
         ps(recorded)
 
-    elif (kb.is_pressed("5")):
+    elif (kb.is_pressed("4")):
         ps(recording)
         while(not mouse.is_pressed("left")):
             x=0
