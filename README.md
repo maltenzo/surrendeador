@@ -26,10 +26,10 @@ las funcionalidades de este bot se limitan a:
 
 # Changelog
 - V 2.0:
- - Solucionado el problema de los clicks dentro de la partida
- - Aun hay problemas con comportamientos inesperados del cliente
+  - Solucionado el problema de los clicks dentro de la partida
+  - Aun hay problemas con comportamientos inesperados del cliente
  
 - V 1.0:
- - Funcionamiento basico
- - Problemas con clicks dentro de la partida
- - Problemas con comportamientos inesperados del cliente
+    - Funcionamiento basico
+    - Problemas con clicks dentro de la partida
+    - Problemas con comportamientos inesperados del cliente
