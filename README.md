@@ -1,4 +1,4 @@
-# surrendeador
+# Surrendeador
 Este proyecto es una aplicacion para farmear el pase de batalla de tft en league of leyends.
 # Que hace:
 las funcionalidades de este bot se limitan a:
@@ -24,4 +24,12 @@ las funcionalidades de este bot se limitan a:
  - Luego de jugar mucho tiempo el cliente parece crashear, seria bueno que se encargue de reiniciar el juego
  - Los clicks dentro de la partida de tft no funcionan bien, por alguna razon el click que hace sobre el boton de rendirse muchas veces parece no hacer efecto. (Parece ser que esta relacionado con una limitacion de la libreria del mouse, sobre que no manda eventos que ocurren cuando el click es por hardware.)
 
-#Changelog
+# Changelog
+- V 2.0:
+ - Solucionado el problema de los clicks dentro de la partida
+ - Aun hay problemas con comportamientos inesperados del cliente
+ 
+- V 1.0:
+ - Funcionamiento basico
+ - Problemas con clicks dentro de la partida
+ - Problemas con comportamientos inesperados del cliente
