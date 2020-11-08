@@ -7,11 +7,11 @@ while True:
     if choice == 1:
         config.config()
     elif choice == 2:
-        #dict = config.leer_datos()
+        dict = config.leer_datos()
         if dict == {}:
             print("Configura las posiciones primero")
         #print(dict)
         else:
             bot = Bot(dict)
             while True:
-                bot.jugar()
+                bot.jugar2()

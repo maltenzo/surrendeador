@@ -77,7 +77,7 @@ def switch():
     #    dict["RENDIRSE"] = mouse.get_position()
     #    ps(recorded)
 
-elif (kb.is_pressed("3")):
+    elif (kb.is_pressed("3")):
         ps(recording)
         while(not mouse.is_pressed("left")):
             x=0
